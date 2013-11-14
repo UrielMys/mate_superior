@@ -60,6 +60,8 @@
     <Compile Include="Polinomio.Designer.cs">
       <DependentUpon>Polinomio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Punto.cs" />
+    <Compile Include="Tabla.cs" />
     <Compile Include="Ventana_principal.cs">
       <SubType>Form</SubType>
     </Compile>
