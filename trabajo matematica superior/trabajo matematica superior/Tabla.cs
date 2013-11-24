@@ -75,6 +75,40 @@ namespace WindowsFormsApplication1
         {
             return this.progresivo(indice - grado, grado);
         }
-
+        public List<float> posiciones_en_x_progresivas()
+        {
+            List<float> algo = new List<float>();
+            foreach(Punto p in puntos){
+                algo.Add(p.get_x());
+            }
+            
+            return algo;
+        }
+        public List<float> pusiciones_en_x_regresivas()
+        {
+            List<float> algo=this.posiciones_en_x_progresivas();
+            algo.Reverse();
+            return (algo);
+        }
+        public List<float> coeficientes_progresivos()
+        {
+            List<float> algo = new List<float>();
+            int i=0;
+            for(i=0;i<=puntos.Count();i++){
+                algo.Add(this.progresivo(0,i));
+            }
+            
+            return algo;
+        }
+        public List<float> coeficientes_regresivos()
+        {
+            List<float> algo = new List<float>();
+            int i=0;
+            for(i=0;i<=puntos.Count();i++){
+                algo.Add(this.regresivo(i,i));
+            }
+            
+            return algo;
+        }
     }
 }

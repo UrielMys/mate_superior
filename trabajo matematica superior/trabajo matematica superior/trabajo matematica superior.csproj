@@ -54,6 +54,7 @@
     <Compile Include="ingreso_puntos.Designer.cs">
       <DependentUpon>ingreso_puntos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pol.cs" />
     <Compile Include="Polinomio.cs">
       <SubType>Form</SubType>
     </Compile>
