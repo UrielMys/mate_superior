@@ -38,8 +38,8 @@ namespace WindowsFormsApplication1
 
         private void ingresarPunto_button_Click(object sender, EventArgs e)
         {
-            int puntoX = int.Parse(posX_textBox.Text);
-            int puntoY = int.Parse(posY_textBox.Text);
+            float puntoX = float.Parse(posX_textBox.Text);
+            float puntoY = float.Parse(posY_textBox.Text);
             Punto unPunto = new Punto();
             unPunto.set_x(puntoX);
             unPunto.set_y(puntoY);

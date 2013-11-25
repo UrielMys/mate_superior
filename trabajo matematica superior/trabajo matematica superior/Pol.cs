@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    class Pol
+    public class Pol
     {
         private List<float> puntos;
         private List<float> coeficientes;
@@ -37,11 +37,36 @@ namespace WindowsFormsApplication1
             for (i = 0; i < coeficientes.Count; i++)
             {
                 if(coeficientes[i]!=0){
-                    polinomio = polinomio + coeficientes[i] + this.parte_de_x(i)+ " + ";
+                    if (coeficientes[i] > 0)
+                    {
+                        polinomio = polinomio + coeficientes[i] + this.parte_de_x(i);
+                    }
+                    else
+                    {
+                        polinomio = polinomio + "("+coeficientes[i]+")" + this.parte_de_x(i);
+                    }
+                    
+                    
+                    
+                    if (i != coeficientes.Count() - 1 && !this.es_el_ultimo_termino(i))
+                    {
+                        polinomio+=" + ";
+                    }
                 }
+                
             }
             return polinomio;
         }
+        public bool es_el_ultimo_termino(int termino)
+        {
+            int i;
+            bool es_ultimo = true;
+            for (i = termino+1; i < coeficientes.Count() && es_ultimo; es_ultimo=(coeficientes[i]==0),i++)
+            {
+            }
+            return es_ultimo;
+        }
+
         public String parte_de_x(int termino){
             //int i;
             String parte_x="";
@@ -80,7 +105,12 @@ namespace WindowsFormsApplication1
             if(posicion==0){
                 return 1;
             }
-            return puntos.Take(posicion).Sum(numero => posicion - numero);
+            float producto=1;
+            List<float> coefs= puntos.Take(posicion).ToList();
+            foreach (float num in coefs){
+                producto = producto * (punto - num);
+            }
+            return producto;
 
         }
     }

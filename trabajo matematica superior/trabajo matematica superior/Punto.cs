@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    class Punto
+    public class Punto
     {
         private float x;
         private float y;

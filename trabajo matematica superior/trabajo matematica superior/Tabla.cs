@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
                 return puntos[indice].get_y();
             }
             float dif_f = this.progresivo(indice+1, grado - 1) - this.progresivo(indice, grado - 1);
-            float dif_x = puntos[indice + 1].get_x() - puntos[indice].get_x();
+            float dif_x = puntos[indice + grado].get_x() - puntos[indice].get_x();
             return (dif_f / dif_x);
         }
         public float regresivo(int indice, int grado)
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1
             List<float> algo = new List<float>();
             int i=0;
             for(i=0;i<puntos.Count();i++){
-                algo.Add(this.regresivo(i,i));
+                algo.Add(this.regresivo(puntos.Count()-1,i));
             }
             
             return algo;

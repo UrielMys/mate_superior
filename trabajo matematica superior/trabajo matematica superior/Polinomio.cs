@@ -17,10 +17,10 @@ namespace WindowsFormsApplication1
         public Polinomio (Tabla tabla)
         {
             InitializeComponent();
-            this.polRegresivo = new Pol(tabla.posiciones_en_x_progresivas(),tabla.coeficientes_progresivos());
-            this.polProgresivo = new Pol(tabla.pusiciones_en_x_regresivas(),tabla.coeficientes_regresivos());
-            this.regresivo_textBox.Text = this.polRegresivo.construir_polinomio().ToString();
+            this.polProgresivo = new Pol(tabla.posiciones_en_x_progresivas(),tabla.coeficientes_progresivos());
             this.progresivo_textBox.Text = this.polProgresivo.construir_polinomio().ToString();
+            this.polRegresivo = new Pol(tabla.pusiciones_en_x_regresivas(),tabla.coeficientes_regresivos());
+            this.regresivo_textBox.Text = this.polRegresivo.construir_polinomio().ToString();
         }
 
         private void agregar_punto_Click(object sender, EventArgs e)
@@ -41,6 +41,13 @@ namespace WindowsFormsApplication1
             VentanaPrincipal formVentanaPrincipal = new VentanaPrincipal();
             this.Close();
             formVentanaPrincipal.Show();
+        }
+
+        private void boton_evaluacion_Click(object sender, EventArgs e)
+        {
+            Evaluacion_Polinomio ev_pol = new Evaluacion_Polinomio(polProgresivo, polRegresivo);
+            ev_pol.Show();
+            this.Close();
         }
     }
 }
