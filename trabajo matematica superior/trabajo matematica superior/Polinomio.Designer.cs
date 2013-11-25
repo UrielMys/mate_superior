@@ -28,87 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.salir_poli = new System.Windows.Forms.Button();
-            this.volver_poli = new System.Windows.Forms.Button();
+            this.salir_button = new System.Windows.Forms.Button();
+            this.volver_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.progresivo = new System.Windows.Forms.TextBox();
-            this.regresivo = new System.Windows.Forms.TextBox();
-            this.agregar_punto = new System.Windows.Forms.Button();
+            this.progresivo_textBox = new System.Windows.Forms.TextBox();
+            this.regresivo_textBox = new System.Windows.Forms.TextBox();
+            this.agregarPunto_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // salir_poli
+            // salir_button
             // 
-            this.salir_poli.Location = new System.Drawing.Point(450, 347);
-            this.salir_poli.Name = "salir_poli";
-            this.salir_poli.Size = new System.Drawing.Size(172, 53);
-            this.salir_poli.TabIndex = 8;
-            this.salir_poli.Text = "salir";
-            this.salir_poli.UseVisualStyleBackColor = true;
+            this.salir_button.Location = new System.Drawing.Point(450, 347);
+            this.salir_button.Name = "salir_button";
+            this.salir_button.Size = new System.Drawing.Size(172, 53);
+            this.salir_button.TabIndex = 8;
+            this.salir_button.Text = "Salir";
+            this.salir_button.UseVisualStyleBackColor = true;
+            this.salir_button.Click += new System.EventHandler(this.salir_button_Click);
             // 
-            // volver_poli
+            // volver_button
             // 
-            this.volver_poli.Location = new System.Drawing.Point(12, 347);
-            this.volver_poli.Name = "volver_poli";
-            this.volver_poli.Size = new System.Drawing.Size(172, 53);
-            this.volver_poli.TabIndex = 9;
-            this.volver_poli.Text = "volver al menu principal";
-            this.volver_poli.UseVisualStyleBackColor = true;
+            this.volver_button.Location = new System.Drawing.Point(12, 347);
+            this.volver_button.Name = "volver_button";
+            this.volver_button.Size = new System.Drawing.Size(172, 53);
+            this.volver_button.TabIndex = 9;
+            this.volver_button.Text = "Volver al menu principal";
+            this.volver_button.UseVisualStyleBackColor = true;
+            this.volver_button.Click += new System.EventHandler(this.volver_button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(95, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "progresivo:";
+            this.label1.Text = "Progresivo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(95, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "regresivo:";
+            this.label2.Text = "Regresivo:";
             // 
-            // progresivo
+            // progresivo_textBox
             // 
-            this.progresivo.Location = new System.Drawing.Point(170, 102);
-            this.progresivo.Name = "progresivo";
-            this.progresivo.Size = new System.Drawing.Size(367, 20);
-            this.progresivo.TabIndex = 12;
+            this.progresivo_textBox.Location = new System.Drawing.Point(170, 102);
+            this.progresivo_textBox.Name = "progresivo_textBox";
+            this.progresivo_textBox.Size = new System.Drawing.Size(367, 20);
+            this.progresivo_textBox.TabIndex = 12;
             // 
-            // regresivo
+            // regresivo_textBox
             // 
-            this.regresivo.Location = new System.Drawing.Point(170, 180);
-            this.regresivo.Name = "regresivo";
-            this.regresivo.Size = new System.Drawing.Size(367, 20);
-            this.regresivo.TabIndex = 13;
+            this.regresivo_textBox.Location = new System.Drawing.Point(170, 180);
+            this.regresivo_textBox.Name = "regresivo_textBox";
+            this.regresivo_textBox.Size = new System.Drawing.Size(367, 20);
+            this.regresivo_textBox.TabIndex = 13;
             // 
-            // agregar_punto
+            // agregarPunto_button
             // 
-            this.agregar_punto.Location = new System.Drawing.Point(231, 243);
-            this.agregar_punto.Name = "agregar_punto";
-            this.agregar_punto.Size = new System.Drawing.Size(172, 53);
-            this.agregar_punto.TabIndex = 14;
-            this.agregar_punto.Text = "agregar punto";
-            this.agregar_punto.UseVisualStyleBackColor = true;
-            this.agregar_punto.Click += new System.EventHandler(this.button1_Click);
+            this.agregarPunto_button.Location = new System.Drawing.Point(231, 243);
+            this.agregarPunto_button.Name = "agregarPunto_button";
+            this.agregarPunto_button.Size = new System.Drawing.Size(172, 53);
+            this.agregarPunto_button.TabIndex = 14;
+            this.agregarPunto_button.Text = "Agregar punto";
+            this.agregarPunto_button.UseVisualStyleBackColor = true;
+            this.agregarPunto_button.Click += new System.EventHandler(this.agregar_punto_Click);
             // 
             // Polinomio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
-            this.Controls.Add(this.agregar_punto);
-            this.Controls.Add(this.regresivo);
-            this.Controls.Add(this.progresivo);
+            this.Controls.Add(this.agregarPunto_button);
+            this.Controls.Add(this.regresivo_textBox);
+            this.Controls.Add(this.progresivo_textBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.volver_poli);
-            this.Controls.Add(this.salir_poli);
+            this.Controls.Add(this.volver_button);
+            this.Controls.Add(this.salir_button);
             this.Name = "Polinomio";
             this.Text = "Polinomio";
             this.ResumeLayout(false);
@@ -118,12 +120,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button salir_poli;
-        private System.Windows.Forms.Button volver_poli;
+        private System.Windows.Forms.Button salir_button;
+        private System.Windows.Forms.Button volver_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox progresivo;
-        private System.Windows.Forms.TextBox regresivo;
-        private System.Windows.Forms.Button agregar_punto;
+        private System.Windows.Forms.TextBox progresivo_textBox;
+        private System.Windows.Forms.TextBox regresivo_textBox;
+        private System.Windows.Forms.Button agregarPunto_button;
     }
 }

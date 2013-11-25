@@ -9,6 +9,7 @@ namespace WindowsFormsApplication1
     {
         private List<float> puntos;
         private List<float> coeficientes;
+
         public List<float> get_puntos(){
             return puntos;
         }
@@ -39,7 +40,7 @@ namespace WindowsFormsApplication1
                     polinomio = polinomio + coeficientes[i] + this.parte_de_x(i)+ " + ";
                 }
             }
-            return "";
+            return polinomio;
         }
         public String parte_de_x(int termino){
             //int i;

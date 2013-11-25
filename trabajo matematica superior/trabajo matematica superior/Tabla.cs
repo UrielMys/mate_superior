@@ -50,8 +50,6 @@ namespace WindowsFormsApplication1
             ordenada.Add(primero);
             ordenada.Concat(this.ordenar_puntos(this.mayores_a(unos_puntos,primero)));
             return ordenada;
-
-
         }
         public List<Punto> mayores_a(List<Punto> unos_puntos, Punto otro_punto)
         {

@@ -15,16 +15,22 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
-        private void ingreso_puntos_Click(object sender, EventArgs e)
-        {
-            ingreso_puntos formIngreso = new ingreso_puntos();
-            formIngreso.ShowDialog();
-        }
-
+        
         private void VentanaPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ingreso_puntos_Click(object sender, EventArgs e)
+        {
+            Equiespaciados formIngreso = new Equiespaciados();
+            formIngreso.Show();
+            this.Hide();
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

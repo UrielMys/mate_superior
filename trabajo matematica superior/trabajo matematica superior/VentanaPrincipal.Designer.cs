@@ -51,6 +51,7 @@
             this.salir.TabIndex = 2;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = true;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // label1
             // 
@@ -61,7 +62,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Calculo de polinomios interpolantes";
             // 
-            // Ventana_principal
+            // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +71,7 @@
             this.Controls.Add(this.salir);
             this.Controls.Add(this.ingreso_puntos);
             this.Name = "VentanaPrincipal";
-            this.Text = "Home de la aplicacion";
+            this.Text = "Inicio";
             this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
