@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             return (puntos.Any(punto => punto.get_x() == un_punto.get_x()));
         }
         public bool es_el_mismo_punto(Punto un_punto){
-            return (puntos.Any(punto => (punto.get_x() == un_punto.get_x())&& (punto.get_y() == un_punto.get_y()));
+            return (puntos.Any(punto => (punto.get_x() == un_punto.get_x())&& (punto.get_y() == un_punto.get_y())));
         }
         public void ordenar()
         {
@@ -46,9 +46,9 @@ namespace WindowsFormsApplication1
                 return unos_puntos;
             }
             Punto primero = unos_puntos[0];
-            List<Punto> ordenada=this.ordenar_puntos(this.menores_a(unos_puntos,primero);
+            List<Punto> ordenada=this.ordenar_puntos(this.menores_a(unos_puntos,primero));
             ordenada.Add(primero);
-            ordenada.Concat(this.ordenar_puntos(this.mayores_a(unos_puntos,primero));
+            ordenada.Concat(this.ordenar_puntos(this.mayores_a(unos_puntos,primero)));
             return ordenada;
 
 

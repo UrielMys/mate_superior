@@ -36,13 +36,13 @@ namespace WindowsFormsApplication1
             for (i = 0; i < coeficientes.Count; i++)
             {
                 if(coeficientes[i]!=0){
-                    polinomio = polinomio + coeficientes[i] + this.parte_de_x(i)+ ' + ';
+                    polinomio = polinomio + coeficientes[i] + this.parte_de_x(i)+ " + ";
                 }
             }
             return "";
         }
         public String parte_de_x(int termino){
-            int i;
+            //int i;
             String parte_x="";
             if(termino!=0)
             {

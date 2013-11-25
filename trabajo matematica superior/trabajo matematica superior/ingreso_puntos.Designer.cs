@@ -68,6 +68,7 @@
             this.calcular_equi.TabIndex = 9;
             this.calcular_equi.Text = "calcular polinomio";
             this.calcular_equi.UseVisualStyleBackColor = true;
+            this.calcular_equi.Click += new System.EventHandler(this.calcular_equi_Click);
             // 
             // pos_y_label
             // 
@@ -110,6 +111,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "ingresar otro punto";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
