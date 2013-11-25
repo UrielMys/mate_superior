@@ -55,6 +55,10 @@ namespace WindowsFormsApplication1
                 }
                 
             }
+            if (puntos.Count() == 1 && coeficientes[0] == 0)
+            {
+                polinomio += "0";
+            }
             return polinomio;
         }
         public bool es_el_ultimo_termino(int termino)

@@ -108,6 +108,7 @@
             // 
             this.valor_textbox.Location = new System.Drawing.Point(170, 145);
             this.valor_textbox.Name = "valor_textbox";
+            this.valor_textbox.ReadOnly = true;
             this.valor_textbox.Size = new System.Drawing.Size(367, 20);
             this.valor_textbox.TabIndex = 17;
             // 

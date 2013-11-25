@@ -80,6 +80,7 @@
             // 
             this.progresivo_textBox.Location = new System.Drawing.Point(78, 102);
             this.progresivo_textBox.Name = "progresivo_textBox";
+            this.progresivo_textBox.ReadOnly = true;
             this.progresivo_textBox.Size = new System.Drawing.Size(544, 20);
             this.progresivo_textBox.TabIndex = 12;
             // 
@@ -87,6 +88,7 @@
             // 
             this.regresivo_textBox.Location = new System.Drawing.Point(78, 180);
             this.regresivo_textBox.Name = "regresivo_textBox";
+            this.regresivo_textBox.ReadOnly = true;
             this.regresivo_textBox.Size = new System.Drawing.Size(544, 20);
             this.regresivo_textBox.TabIndex = 13;
             // 

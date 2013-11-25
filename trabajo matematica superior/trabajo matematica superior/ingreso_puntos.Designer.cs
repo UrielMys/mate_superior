@@ -192,9 +192,9 @@
         private System.Windows.Forms.Button volverEquiespaciado_button;
         private System.Windows.Forms.Button calcularPolinomio_button;
         private System.Windows.Forms.Label posY_label;
-        private System.Windows.Forms.TextBox posY_textBox;
         private System.Windows.Forms.Label posX_label;
         private System.Windows.Forms.TextBox posX_textBox;
+        private System.Windows.Forms.TextBox posY_textBox;
         private System.Windows.Forms.Button ingresarPunto_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label valor_h_label;
