@@ -62,5 +62,12 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
+        private void sacar_punto_Click(object sender, EventArgs e)
+        {
+            unaTabla.sacar_punto(float.Parse(posX_textBox.Text));
+            this.posX_textBox.Text = "";
+            this.posY_textBox.Text = "";
+        }
+
     }
 }

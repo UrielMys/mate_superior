@@ -96,7 +96,7 @@
             this.agregarPunto_button.Name = "agregarPunto_button";
             this.agregarPunto_button.Size = new System.Drawing.Size(172, 53);
             this.agregarPunto_button.TabIndex = 14;
-            this.agregarPunto_button.Text = "Agregar punto";
+            this.agregarPunto_button.Text = "Agregar/Quitar punto";
             this.agregarPunto_button.UseVisualStyleBackColor = true;
             this.agregarPunto_button.Click += new System.EventHandler(this.agregar_punto_Click);
             // 

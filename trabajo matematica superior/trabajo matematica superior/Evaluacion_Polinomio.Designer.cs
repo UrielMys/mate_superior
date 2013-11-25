@@ -36,6 +36,7 @@
             this.boton_regresivo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.valor_textbox = new System.Windows.Forms.TextBox();
+            this.agregarPunto_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // salir_button
@@ -60,7 +61,7 @@
             // 
             // boton_progresivo
             // 
-            this.boton_progresivo.Location = new System.Drawing.Point(170, 243);
+            this.boton_progresivo.Location = new System.Drawing.Point(155, 243);
             this.boton_progresivo.Name = "boton_progresivo";
             this.boton_progresivo.Size = new System.Drawing.Size(172, 53);
             this.boton_progresivo.TabIndex = 11;
@@ -110,11 +111,22 @@
             this.valor_textbox.Size = new System.Drawing.Size(367, 20);
             this.valor_textbox.TabIndex = 17;
             // 
+            // agregarPunto_button
+            // 
+            this.agregarPunto_button.Location = new System.Drawing.Point(236, 347);
+            this.agregarPunto_button.Name = "agregarPunto_button";
+            this.agregarPunto_button.Size = new System.Drawing.Size(172, 53);
+            this.agregarPunto_button.TabIndex = 18;
+            this.agregarPunto_button.Text = "Agregar/Quitar punto";
+            this.agregarPunto_button.UseVisualStyleBackColor = true;
+            this.agregarPunto_button.Click += new System.EventHandler(this.agregarPunto_button_Click);
+            // 
             // Evaluacion_Polinomio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
+            this.Controls.Add(this.agregarPunto_button);
             this.Controls.Add(this.valor_textbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.boton_regresivo);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.Button boton_regresivo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox valor_textbox;
+        private System.Windows.Forms.Button agregarPunto_button;
     }
 }

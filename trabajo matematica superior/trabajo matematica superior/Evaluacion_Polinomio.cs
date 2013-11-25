@@ -50,5 +50,10 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
+        private void agregarPunto_button_Click(object sender, EventArgs e)
+        {
+            //vuelve a la ventana de agregar puntos
+        }
+
     }
 }

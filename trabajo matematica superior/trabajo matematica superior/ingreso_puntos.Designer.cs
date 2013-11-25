@@ -40,6 +40,7 @@
             this.valor_h_label = new System.Windows.Forms.Label();
             this.cantPuntos_label = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
+            this.sacar_punto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // salir_button
@@ -106,7 +107,7 @@
             // 
             // ingresarPunto_button
             // 
-            this.ingresarPunto_button.Location = new System.Drawing.Point(231, 197);
+            this.ingresarPunto_button.Location = new System.Drawing.Point(120, 211);
             this.ingresarPunto_button.Name = "ingresarPunto_button";
             this.ingresarPunto_button.Size = new System.Drawing.Size(172, 53);
             this.ingresarPunto_button.TabIndex = 14;
@@ -140,7 +141,6 @@
             this.cantPuntos_label.Size = new System.Drawing.Size(99, 13);
             this.cantPuntos_label.TabIndex = 18;
             this.cantPuntos_label.Text = "Cantidad de puntos";
-
             // 
             // label
             // 
@@ -151,11 +151,22 @@
             this.label.TabIndex = 17;
             this.label.Text = "Cantidad de puntos:";
             // 
+            // sacar_punto
+            // 
+            this.sacar_punto.Location = new System.Drawing.Point(371, 211);
+            this.sacar_punto.Name = "sacar_punto";
+            this.sacar_punto.Size = new System.Drawing.Size(172, 53);
+            this.sacar_punto.TabIndex = 19;
+            this.sacar_punto.Text = "Quitar punto";
+            this.sacar_punto.UseVisualStyleBackColor = true;
+            this.sacar_punto.Click += new System.EventHandler(this.sacar_punto_Click);
+            // 
             // ingreso_puntos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
+            this.Controls.Add(this.sacar_punto);
             this.Controls.Add(this.cantPuntos_label);
             this.Controls.Add(this.label);
             this.Controls.Add(this.valor_h_label);
@@ -189,5 +200,6 @@
         private System.Windows.Forms.Label valor_h_label;
         private System.Windows.Forms.Label cantPuntos_label;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button sacar_punto;
     }
 }

@@ -109,5 +109,9 @@ namespace WindowsFormsApplication1
             
             return algo;
         }
+        public void sacar_punto(float coord_x)
+        {
+            puntos = puntos.FindAll(punto => punto.get_x() != coord_x);
+        }
     }
 }
