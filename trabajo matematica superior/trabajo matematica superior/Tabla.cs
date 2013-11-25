@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    class Tabla
+    public class Tabla
     {
         private List<Punto> puntos;
 
@@ -86,13 +86,14 @@ namespace WindowsFormsApplication1
         {
             List<float> algo=this.posiciones_en_x_progresivas();
             algo.Reverse();
+//            algo.Reverse(0, algo.Count()-1);
             return (algo);
         }
         public List<float> coeficientes_progresivos()
         {
             List<float> algo = new List<float>();
             int i=0;
-            for(i=0;i<=puntos.Count();i++){
+            for(i=0;i<puntos.Count();i++){
                 algo.Add(this.progresivo(0,i));
             }
             
@@ -102,7 +103,7 @@ namespace WindowsFormsApplication1
         {
             List<float> algo = new List<float>();
             int i=0;
-            for(i=0;i<=puntos.Count();i++){
+            for(i=0;i<puntos.Count();i++){
                 algo.Add(this.regresivo(i,i));
             }
             

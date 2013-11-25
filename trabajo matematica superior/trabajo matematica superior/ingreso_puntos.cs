@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
         private void calcular_equi_Click(object sender, EventArgs e)
         {
-            Polinomio formPolinomio = new Polinomio(unaTabla.coeficientes_regresivos(), unaTabla.coeficientes_progresivos());
+            Polinomio formPolinomio = new Polinomio(unaTabla);
             formPolinomio.Show();
             this.Close();
         }

@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
 
         private void ingreso_puntos_Click(object sender, EventArgs e)
         {
-            Equiespaciados formIngreso = new Equiespaciados();
+            ingreso_puntos formIngreso = new ingreso_puntos();
             formIngreso.Show();
             this.Hide();
         }

@@ -14,13 +14,11 @@ namespace WindowsFormsApplication1
         private Pol polRegresivo;
         private Pol polProgresivo;
 
-        public Polinomio(List<float> coeficientes_regres, List<float> coeficientes_progres)
+        public Polinomio (Tabla tabla)
         {
             InitializeComponent();
-            this.polRegresivo = new Pol();
-            this.polProgresivo = new Pol();
-            this.polRegresivo.set_coeficientes(coeficientes_regres);
-            this.polProgresivo.set_coeficientes(coeficientes_progres);
+            this.polRegresivo = new Pol(tabla.posiciones_en_x_progresivas(),tabla.coeficientes_progresivos());
+            this.polProgresivo = new Pol(tabla.pusiciones_en_x_regresivas(),tabla.coeficientes_regresivos());
             this.regresivo_textBox.Text = this.polRegresivo.construir_polinomio().ToString();
             this.progresivo_textBox.Text = this.polProgresivo.construir_polinomio().ToString();
         }

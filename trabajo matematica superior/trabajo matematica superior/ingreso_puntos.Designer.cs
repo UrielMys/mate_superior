@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class ingreso_puntos
+    public partial class ingreso_puntos
     {
         /// <summary>
         /// Required designer variable.
