@@ -48,7 +48,8 @@ namespace WindowsFormsApplication1
             Punto primero = unos_puntos[0];
             List<Punto> ordenada=this.ordenar_puntos(this.menores_a(unos_puntos,primero));
             ordenada.Add(primero);
-            ordenada.Concat(this.ordenar_puntos(this.mayores_a(unos_puntos,primero)));
+            List<Punto> mayores_ordenados = this.ordenar_puntos(this.mayores_a(unos_puntos, primero));
+            ordenada=ordenada.Concat(mayores_ordenados).ToList();
             return ordenada;
         }
         public List<Punto> mayores_a(List<Punto> unos_puntos, Punto otro_punto)
@@ -57,7 +58,7 @@ namespace WindowsFormsApplication1
         }
         public List<Punto> menores_a(List<Punto> unos_puntos, Punto otro_punto)
         {
-            return (unos_puntos.FindAll(un_punto => !un_punto.sos_mayor_a(otro_punto)));
+            return (unos_puntos.FindAll(un_punto => otro_punto.sos_mayor_a(un_punto)));
         }
         public float progresivo(int indice, int grado)
         {
@@ -121,12 +122,12 @@ namespace WindowsFormsApplication1
             {
                 return false;
             }
-            for (int i = 0; i < puntos.Count() - 2 & existe; existe = (puntos[i + 1].get_x() - puntos[i].get_x() == h), i++) ;
+            for (int i = 0; i < puntos.Count() - 1 & existe; existe = (puntos[i + 1].get_x() - puntos[i].get_x() == h), i++) ;
             return existe;
         }
         public float posible_h()
         {
-            if (puntos.Count() < 2)
+            if (puntos.Count() <= 1)
             {
                 return 0;
             }

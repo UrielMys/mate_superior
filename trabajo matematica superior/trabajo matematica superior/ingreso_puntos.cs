@@ -52,6 +52,8 @@ namespace WindowsFormsApplication1
         {
             float puntoX = float.Parse(posX_textBox.Text);
             float puntoY = float.Parse(posY_textBox.Text);
+            this.h_label.Visible = false;
+            this.h_valor_label.Visible = false;
             Punto unPunto = new Punto();
             unPunto.set_x(puntoX);
             unPunto.set_y(puntoY);
@@ -59,13 +61,16 @@ namespace WindowsFormsApplication1
             this.set_cantPuntos(unaTabla.get_puntos().Count);
             this.posX_textBox.Text = "";
             this.posY_textBox.Text = "";
-
-            if (this.unaTabla.existe_h())
+            unaTabla.ordenar();
+            bool existe_h = this.unaTabla.existe_h();
+            if (existe_h)
             {
+
                 this.h_label.Visible = true;
                 this.h_valor_label.Visible = true;
                 this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
             }
+            
 
 
 
@@ -83,6 +88,16 @@ namespace WindowsFormsApplication1
             unaTabla.sacar_punto(float.Parse(posX_textBox.Text));
             this.posX_textBox.Text = "";
             this.posY_textBox.Text = "";
+            this.h_label.Visible = false;
+            this.h_valor_label.Visible = false;
+            bool existe_h = this.unaTabla.existe_h();
+            if (existe_h)
+            {
+
+                this.h_label.Visible = true;
+                this.h_valor_label.Visible = true;
+                this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
+            }
         }
 
         private void volverMenuPrincipal_button_Click(object sender, EventArgs e)
