@@ -70,11 +70,6 @@ namespace WindowsFormsApplication1
                 this.h_valor_label.Visible = true;
                 this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
             }
-            
-
-
-
-
         }
 
         private void salir_button_Click(object sender, EventArgs e)
@@ -93,11 +88,11 @@ namespace WindowsFormsApplication1
             bool existe_h = this.unaTabla.existe_h();
             if (existe_h)
             {
-
                 this.h_label.Visible = true;
                 this.h_valor_label.Visible = true;
                 this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
             }
+            this.set_cantPuntos(this.unaTabla.get_puntos().Count);
         }
 
         private void volverMenuPrincipal_button_Click(object sender, EventArgs e)
