@@ -13,10 +13,11 @@ namespace WindowsFormsApplication1
     {
         Tabla unaTabla;
         VentanaPrincipal formVentanaPrincipal;
+        Polinomio formPolinomio;
         public ingreso_puntos()
         {
             InitializeComponent();
-           
+            formPolinomio=new Polinomio(this);
             this.set_cantPuntos(0);
             this.unaTabla = new Tabla();
         }
@@ -24,16 +25,19 @@ namespace WindowsFormsApplication1
         public ingreso_puntos(VentanaPrincipal formVentana)
         {
             InitializeComponent();
+            formPolinomio = new Polinomio(this);
             this.h_label.Visible = false;
             this.h_valor_label.Visible = false;
             this.set_cantPuntos(0);
             this.unaTabla = new Tabla();
-            this.formVentanaPrincipal = formVentana;        
+            this.formVentanaPrincipal = formVentana;
+            
         }
 
         private void calcular_equi_Click(object sender, EventArgs e)
         {
-            Polinomio formPolinomio = new Polinomio(unaTabla, this);
+            
+            formPolinomio.nuevos_datos(unaTabla);
             formPolinomio.Show();
             this.Hide();
         }
@@ -70,12 +74,24 @@ namespace WindowsFormsApplication1
                 this.h_valor_label.Visible = true;
                 this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
             }
+            if (formPolinomio.cambiara_para(unPunto))
+            {
+                label_cambio_pol.Visible = true;
+            }
+            else
+            {
+                label_cambio_pol.Visible = false;
+            }
         }
 
         private void salir_button_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
+        }
+        public void label_invisible()
+        {
+            label_cambio_pol.Visible = false;
         }
 
         private void sacar_punto_Click(object sender, EventArgs e)

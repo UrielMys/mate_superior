@@ -42,6 +42,7 @@
             this.viewTable_button = new System.Windows.Forms.Button();
             this.h_label = new System.Windows.Forms.Label();
             this.h_valor_label = new System.Windows.Forms.Label();
+            this.label_cambio_pol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // salir_button
@@ -172,11 +173,22 @@
             this.h_valor_label.TabIndex = 22;
             this.h_valor_label.Text = "Valor";
             // 
+            // label_cambio_pol
+            // 
+            this.label_cambio_pol.AutoSize = true;
+            this.label_cambio_pol.Location = new System.Drawing.Point(447, 162);
+            this.label_cambio_pol.Name = "label_cambio_pol";
+            this.label_cambio_pol.Size = new System.Drawing.Size(60, 13);
+            this.label_cambio_pol.TabIndex = 23;
+            this.label_cambio_pol.Text = "Cambiara!!!";
+            this.label_cambio_pol.Visible = false;
+            // 
             // ingreso_puntos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
+            this.Controls.Add(this.label_cambio_pol);
             this.Controls.Add(this.h_valor_label);
             this.Controls.Add(this.h_label);
             this.Controls.Add(this.viewTable_button);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.Button viewTable_button;
         private System.Windows.Forms.Label h_label;
         private System.Windows.Forms.Label h_valor_label;
+        private System.Windows.Forms.Label label_cambio_pol;
     }
 }
