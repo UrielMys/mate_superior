@@ -72,7 +72,6 @@
             this.Controls.Add(this.ingreso_puntos);
             this.Name = "VentanaPrincipal";
             this.Text = "Inicio";
-            this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

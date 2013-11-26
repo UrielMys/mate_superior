@@ -15,15 +15,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        
-        private void VentanaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void ingreso_puntos_Click(object sender, EventArgs e)
         {
-            ingreso_puntos formIngreso = new ingreso_puntos();
+            ingreso_puntos formIngreso = new ingreso_puntos(this);
             formIngreso.Show();
             this.Hide();
         }
@@ -31,6 +26,7 @@ namespace WindowsFormsApplication1
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }

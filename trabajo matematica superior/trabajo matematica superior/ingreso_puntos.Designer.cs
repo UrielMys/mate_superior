@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.salir_button = new System.Windows.Forms.Button();
-            this.volverEquiespaciado_button = new System.Windows.Forms.Button();
+            this.volverMenuPrincipal_button = new System.Windows.Forms.Button();
             this.calcularPolinomio_button = new System.Windows.Forms.Button();
             this.posY_label = new System.Windows.Forms.Label();
             this.posY_textBox = new System.Windows.Forms.TextBox();
             this.posX_label = new System.Windows.Forms.Label();
             this.posX_textBox = new System.Windows.Forms.TextBox();
             this.ingresarPunto_button = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.valor_h_label = new System.Windows.Forms.Label();
             this.cantPuntos_label = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.sacar_punto = new System.Windows.Forms.Button();
+            this.viewTable_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // salir_button
@@ -53,15 +53,15 @@
             this.salir_button.UseVisualStyleBackColor = true;
             this.salir_button.Click += new System.EventHandler(this.salir_button_Click);
             // 
-            // volverEquiespaciado_button
+            // volverMenuPrincipal_button
             // 
-            this.volverEquiespaciado_button.Location = new System.Drawing.Point(12, 347);
-            this.volverEquiespaciado_button.Name = "volverEquiespaciado_button";
-            this.volverEquiespaciado_button.Size = new System.Drawing.Size(172, 53);
-            this.volverEquiespaciado_button.TabIndex = 8;
-            this.volverEquiespaciado_button.Text = "Volver";
-            this.volverEquiespaciado_button.UseVisualStyleBackColor = true;
-            this.volverEquiespaciado_button.Click += new System.EventHandler(this.volverEquiespaciado_button_Click);
+            this.volverMenuPrincipal_button.Location = new System.Drawing.Point(12, 347);
+            this.volverMenuPrincipal_button.Name = "volverMenuPrincipal_button";
+            this.volverMenuPrincipal_button.Size = new System.Drawing.Size(172, 53);
+            this.volverMenuPrincipal_button.TabIndex = 8;
+            this.volverMenuPrincipal_button.Text = "Volver al menú principal";
+            this.volverMenuPrincipal_button.UseVisualStyleBackColor = true;
+            this.volverMenuPrincipal_button.Click += new System.EventHandler(this.volverMenuPrincipal_button_Click);
             // 
             // calcularPolinomio_button
             // 
@@ -107,7 +107,7 @@
             // 
             // ingresarPunto_button
             // 
-            this.ingresarPunto_button.Location = new System.Drawing.Point(120, 211);
+            this.ingresarPunto_button.Location = new System.Drawing.Point(12, 211);
             this.ingresarPunto_button.Name = "ingresarPunto_button";
             this.ingresarPunto_button.Size = new System.Drawing.Size(172, 53);
             this.ingresarPunto_button.TabIndex = 14;
@@ -115,23 +115,13 @@
             this.ingresarPunto_button.UseVisualStyleBackColor = true;
             this.ingresarPunto_button.Click += new System.EventHandler(this.ingresarPunto_button_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "h:";
-            // 
             // valor_h_label
             // 
             this.valor_h_label.AutoSize = true;
             this.valor_h_label.Location = new System.Drawing.Point(368, 163);
             this.valor_h_label.Name = "valor_h_label";
-            this.valor_h_label.Size = new System.Drawing.Size(51, 13);
+            this.valor_h_label.Size = new System.Drawing.Size(0, 13);
             this.valor_h_label.TabIndex = 16;
-            this.valor_h_label.Text = "Distancia";
             // 
             // cantPuntos_label
             // 
@@ -153,7 +143,7 @@
             // 
             // sacar_punto
             // 
-            this.sacar_punto.Location = new System.Drawing.Point(371, 211);
+            this.sacar_punto.Location = new System.Drawing.Point(231, 211);
             this.sacar_punto.Name = "sacar_punto";
             this.sacar_punto.Size = new System.Drawing.Size(172, 53);
             this.sacar_punto.TabIndex = 19;
@@ -161,23 +151,33 @@
             this.sacar_punto.UseVisualStyleBackColor = true;
             this.sacar_punto.Click += new System.EventHandler(this.sacar_punto_Click);
             // 
+            // viewTable_button
+            // 
+            this.viewTable_button.Location = new System.Drawing.Point(450, 211);
+            this.viewTable_button.Name = "viewTable_button";
+            this.viewTable_button.Size = new System.Drawing.Size(172, 53);
+            this.viewTable_button.TabIndex = 20;
+            this.viewTable_button.Text = "Ver tabla";
+            this.viewTable_button.UseVisualStyleBackColor = true;
+            this.viewTable_button.Click += new System.EventHandler(this.viewTable_button_Click);
+            // 
             // ingreso_puntos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
+            this.Controls.Add(this.viewTable_button);
             this.Controls.Add(this.sacar_punto);
             this.Controls.Add(this.cantPuntos_label);
             this.Controls.Add(this.label);
             this.Controls.Add(this.valor_h_label);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.ingresarPunto_button);
             this.Controls.Add(this.posX_textBox);
             this.Controls.Add(this.posX_label);
             this.Controls.Add(this.posY_textBox);
             this.Controls.Add(this.posY_label);
             this.Controls.Add(this.calcularPolinomio_button);
-            this.Controls.Add(this.volverEquiespaciado_button);
+            this.Controls.Add(this.volverMenuPrincipal_button);
             this.Controls.Add(this.salir_button);
             this.Name = "ingreso_puntos";
             this.Text = "Ingresar puntos equiespaciados";
@@ -189,17 +189,17 @@
         #endregion
 
         private System.Windows.Forms.Button salir_button;
-        private System.Windows.Forms.Button volverEquiespaciado_button;
+        private System.Windows.Forms.Button volverMenuPrincipal_button;
         private System.Windows.Forms.Button calcularPolinomio_button;
         private System.Windows.Forms.Label posY_label;
         private System.Windows.Forms.Label posX_label;
         private System.Windows.Forms.TextBox posX_textBox;
         private System.Windows.Forms.TextBox posY_textBox;
         private System.Windows.Forms.Button ingresarPunto_button;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label valor_h_label;
         private System.Windows.Forms.Label cantPuntos_label;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button sacar_punto;
+        private System.Windows.Forms.Button viewTable_button;
     }
 }

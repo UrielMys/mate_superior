@@ -12,28 +12,37 @@ namespace WindowsFormsApplication1
     public partial class ingreso_puntos : Form
     {
         Tabla unaTabla;
+        VentanaPrincipal formVentanaPrincipal;
         public ingreso_puntos()
         {
             InitializeComponent();
             this.set_cantPuntos(0);
-            unaTabla = new Tabla();
+            this.unaTabla = new Tabla();
+        }
+
+        public ingreso_puntos(VentanaPrincipal formVentana)
+        {
+            InitializeComponent();
+            this.set_cantPuntos(0);
+            this.unaTabla = new Tabla();
+            this.formVentanaPrincipal = formVentana;        
         }
 
         private void calcular_equi_Click(object sender, EventArgs e)
         {
-            Polinomio formPolinomio = new Polinomio(unaTabla);
+            Polinomio formPolinomio = new Polinomio(unaTabla, this);
             formPolinomio.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        public void set_table(Tabla otraTabla) 
+        {
+            this.unaTabla = otraTabla;
         }
 
         private void set_cantPuntos(int cantidadDePuntos) 
         {
             this.cantPuntos_label.Text = cantidadDePuntos.ToString();
-        }
-
-        public void set_h(int h) 
-        {
-            valor_h_label.Text = h.ToString();
         }
 
         private void ingresarPunto_button_Click(object sender, EventArgs e)
@@ -55,18 +64,23 @@ namespace WindowsFormsApplication1
             Application.Exit();
         }
 
-        private void volverEquiespaciado_button_Click(object sender, EventArgs e)
-        {
-            Equiespaciados formEquiespaciados = new Equiespaciados();
-            formEquiespaciados.Show();
-            this.Close();
-        }
-
         private void sacar_punto_Click(object sender, EventArgs e)
         {
             unaTabla.sacar_punto(float.Parse(posX_textBox.Text));
             this.posX_textBox.Text = "";
             this.posY_textBox.Text = "";
+        }
+
+        private void volverMenuPrincipal_button_Click(object sender, EventArgs e)
+        {
+            this.formVentanaPrincipal.Show();
+            this.Close();
+        }
+
+        private void viewTable_button_Click(object sender, EventArgs e)
+        {
+            ViewTable formViewTable = new ViewTable(this.unaTabla);
+            formViewTable.Show();
         }
 
     }

@@ -13,11 +13,16 @@ namespace WindowsFormsApplication1
     {
         private Pol prog;
         private Pol reg;
-        public Evaluacion_Polinomio(Pol progresivo, Pol regresivo)
+        private Tabla miTabla;
+        private ingreso_puntos formIngresoPuntos;
+
+        public Evaluacion_Polinomio(ingreso_puntos formIngreso, Tabla unaTabla, Pol progresivo, Pol regresivo)
         {
             InitializeComponent();
-            prog = progresivo;
-            reg = regresivo;
+            this.miTabla = unaTabla; 
+            this.formIngresoPuntos = formIngreso;
+            this.prog = progresivo;
+            this.reg = regresivo;
         }
 
         private void boton_regresivo_Click(object sender, EventArgs e)
@@ -45,14 +50,16 @@ namespace WindowsFormsApplication1
 
         private void volver_button_Click(object sender, EventArgs e)
         {
-            Equiespaciados formEquiespaciados = new Equiespaciados();
-            formEquiespaciados.Show();
+            VentanaPrincipal formVentanaPrincipal = new VentanaPrincipal();
+            formVentanaPrincipal.Show();
             this.Close();
         }
 
         private void agregarPunto_button_Click(object sender, EventArgs e)
         {
-            //vuelve a la ventana de agregar puntos
+            this.formIngresoPuntos.set_table(this.miTabla);
+            this.formIngresoPuntos.Show();
+            this.Close();
         }
 
     }
