@@ -127,7 +127,6 @@
             this.Controls.Add(this.salir_button);
             this.Name = "Polinomio";
             this.Text = "Polinomio";
-            this.Load += new System.EventHandler(this.Polinomio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
