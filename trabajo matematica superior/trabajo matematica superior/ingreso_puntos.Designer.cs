@@ -36,11 +36,12 @@
             this.posX_label = new System.Windows.Forms.Label();
             this.posX_textBox = new System.Windows.Forms.TextBox();
             this.ingresarPunto_button = new System.Windows.Forms.Button();
-            this.valor_h_label = new System.Windows.Forms.Label();
             this.cantPuntos_label = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.sacar_punto = new System.Windows.Forms.Button();
             this.viewTable_button = new System.Windows.Forms.Button();
+            this.h_label = new System.Windows.Forms.Label();
+            this.h_valor_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // salir_button
@@ -115,14 +116,6 @@
             this.ingresarPunto_button.UseVisualStyleBackColor = true;
             this.ingresarPunto_button.Click += new System.EventHandler(this.ingresarPunto_button_Click);
             // 
-            // valor_h_label
-            // 
-            this.valor_h_label.AutoSize = true;
-            this.valor_h_label.Location = new System.Drawing.Point(368, 163);
-            this.valor_h_label.Name = "valor_h_label";
-            this.valor_h_label.Size = new System.Drawing.Size(0, 13);
-            this.valor_h_label.TabIndex = 16;
-            // 
             // cantPuntos_label
             // 
             this.cantPuntos_label.AutoSize = true;
@@ -161,16 +154,35 @@
             this.viewTable_button.UseVisualStyleBackColor = true;
             this.viewTable_button.Click += new System.EventHandler(this.viewTable_button_Click);
             // 
+            // h_label
+            // 
+            this.h_label.AutoSize = true;
+            this.h_label.Location = new System.Drawing.Point(232, 162);
+            this.h_label.Name = "h_label";
+            this.h_label.Size = new System.Drawing.Size(66, 13);
+            this.h_label.TabIndex = 21;
+            this.h_label.Text = "Distancia (h)";
+            // 
+            // h_valor_label
+            // 
+            this.h_valor_label.AutoSize = true;
+            this.h_valor_label.Location = new System.Drawing.Point(329, 162);
+            this.h_valor_label.Name = "h_valor_label";
+            this.h_valor_label.Size = new System.Drawing.Size(31, 13);
+            this.h_valor_label.TabIndex = 22;
+            this.h_valor_label.Text = "Valor";
+            // 
             // ingreso_puntos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 412);
+            this.Controls.Add(this.h_valor_label);
+            this.Controls.Add(this.h_label);
             this.Controls.Add(this.viewTable_button);
             this.Controls.Add(this.sacar_punto);
             this.Controls.Add(this.cantPuntos_label);
             this.Controls.Add(this.label);
-            this.Controls.Add(this.valor_h_label);
             this.Controls.Add(this.ingresarPunto_button);
             this.Controls.Add(this.posX_textBox);
             this.Controls.Add(this.posX_label);
@@ -196,10 +208,11 @@
         private System.Windows.Forms.TextBox posX_textBox;
         private System.Windows.Forms.TextBox posY_textBox;
         private System.Windows.Forms.Button ingresarPunto_button;
-        private System.Windows.Forms.Label valor_h_label;
         private System.Windows.Forms.Label cantPuntos_label;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button sacar_punto;
         private System.Windows.Forms.Button viewTable_button;
+        private System.Windows.Forms.Label h_label;
+        private System.Windows.Forms.Label h_valor_label;
     }
 }

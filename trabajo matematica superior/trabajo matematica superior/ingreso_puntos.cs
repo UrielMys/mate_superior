@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         public ingreso_puntos()
         {
             InitializeComponent();
+           
             this.set_cantPuntos(0);
             this.unaTabla = new Tabla();
         }
@@ -23,6 +24,8 @@ namespace WindowsFormsApplication1
         public ingreso_puntos(VentanaPrincipal formVentana)
         {
             InitializeComponent();
+            this.h_label.Visible = false;
+            this.h_valor_label.Visible = false;
             this.set_cantPuntos(0);
             this.unaTabla = new Tabla();
             this.formVentanaPrincipal = formVentana;        
@@ -56,6 +59,17 @@ namespace WindowsFormsApplication1
             this.set_cantPuntos(unaTabla.get_puntos().Count);
             this.posX_textBox.Text = "";
             this.posY_textBox.Text = "";
+
+            if (this.unaTabla.existe_h())
+            {
+                this.h_label.Visible = true;
+                this.h_valor_label.Visible = true;
+                this.h_valor_label.Text = this.unaTabla.posible_h().ToString();
+            }
+
+
+
+
         }
 
         private void salir_button_Click(object sender, EventArgs e)
