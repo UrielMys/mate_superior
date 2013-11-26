@@ -113,5 +113,24 @@ namespace WindowsFormsApplication1
         {
             puntos = puntos.FindAll(punto => punto.get_x() != coord_x);
         }
+        public bool existe_h()
+        {
+            float h = this.posible_h();
+            bool existe = true;
+            if (h == 0)
+            {
+                return false;
+            }
+            for (int i = 0; i < puntos.Count() - 2 & existe; existe = (puntos[i + 1].get_x() - puntos[i].get_x() == h), i++) ;
+            return existe;
+        }
+        public float posible_h()
+        {
+            if (puntos.Count() < 2)
+            {
+                return 0;
+            }
+            return (puntos[1].get_x() - puntos[0].get_x());
+        }
     }
 }
